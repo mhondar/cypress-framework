@@ -1,0 +1,22 @@
+{
+  "name": "automatizacion",
+  "version": "1.0.0",
+  "description": "primer proyecto aprendiendo a automatizar con cypress",
+  "main": "index.js",
+  "scripts": {
+    "open": "node_modules//.bin//cypress open",
+    "test": "node_modules//.bin//cypress run",
+    "testChrome": "npm run test -- --browser chrome",
+    "testDashboardChromeHeadless": "npm run test -- --record --key 2b7ac842-fd10-45b6-a369-b29a72f368d7 --browser chrome --headless",
+    "testConjunto1": "npm run testDashboardChromeHeadless -- --spec 'cypress/integration/examples/Conjunto1/*'"
+  },
+  "author": "Mari Hondar",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.0.1",
+    "cypress-cucumber-preprocessor": "^4.0.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
